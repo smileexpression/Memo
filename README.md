@@ -9,7 +9,7 @@
 
 [clash下载地址 github](https://github.com/Dreamacro/clash/releases)（已跑路）
 
-[别人下载好的](https://disk.pku.edu.cn/#/link/60D2F38BE69B49D11C6B32FEB32F31A3)
+[别人下载好的](https://disk.pku.edu.cn/#/link/60D2F38BE69B49D11C6B32FEB32F31A3)（已失效）
 
 ```bash
 cd ~
@@ -356,3 +356,9 @@ Avoid using spaces if possible. I tried to use path as
 It worked in marktext, but not in github
 
 The final solution is to replace spaces with `%20` beacause github will automatically replace spaces in path with `%20`.
+
+### github markdown中latex块内公式换行
+
+https://github.com/flysnow-org/maupassant-hugo/issues/21
+
+懒得试，自行尝试。想要在github上渲染出来，会导致pdf很丑。为了兼顾导出的pdf和github上渲染出来的效果，直接开新块了。
