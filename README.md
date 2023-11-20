@@ -144,3 +144,17 @@ cd clash
 **导入订阅链接**
 
 和windows下使用没什么不同，懂得都懂。
+
+## 虚拟机迁移后无法联网
+
+虚拟机迁移后遇到突然连不上网的问题
+
+1. 宿主windows中，settings -> Betwork & internet -> Advanced network settings，允许虚拟机的网络适配器
+
+2. 虚拟机中
+
+   ```bash
+   sudo dhclient ens33
+   ```
+
+   
