@@ -366,3 +366,9 @@ https://github.com/flysnow-org/maupassant-hugo/issues/21
 ### vscode跟随系统切换主题
 
 settings搜索auto detect color scheme，勾上。
+
+### github markdown中latex对于小于号<的渲染
+
+又是一个逆天的问题。
+
+可以渲染出`>`，就是不能渲染出`<`。只能用`\textless`。
