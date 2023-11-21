@@ -362,3 +362,7 @@ The final solution is to replace spaces with `%20` beacause github will automati
 https://github.com/flysnow-org/maupassant-hugo/issues/21
 
 懒得试，自行尝试。想要在github上渲染出来，会导致pdf很丑。为了兼顾导出的pdf和github上渲染出来的效果，直接开新块了。
+
+### vscode跟随系统切换主题
+
+settings搜索auto detect color scheme，勾上。
