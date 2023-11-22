@@ -372,3 +372,7 @@ settings搜索auto detect color scheme，勾上。
 又是一个逆天的问题。
 
 可以渲染出`>`，就是不能渲染出`<`。只能用`\textless`。
+
+### github管理unity项目
+
+.gitignore中不能忽略.meta后缀的文件。新生成的.meta文件，guid与删除文件之前不同。
