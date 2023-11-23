@@ -376,3 +376,7 @@ settings搜索auto detect color scheme，勾上。
 ### github管理unity项目
 
 .gitignore中不能忽略.meta后缀的文件。新生成的.meta文件，guid与删除文件之前不同。
+
+### Acrobat打开PDF时，出现“内容准备进度。正在准备文档以供阅读，请稍候。”状态：正在处理第 页，共 _ 页”
+
+https://helpx.adobe.com/cn/acrobat/kb/message-content-preparation-progress-opening.html
