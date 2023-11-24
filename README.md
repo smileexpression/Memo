@@ -380,3 +380,10 @@ settings搜索auto detect color scheme，勾上。
 ### Acrobat打开PDF时，出现“内容准备进度。正在准备文档以供阅读，请稍候。”状态：正在处理第 页，共 _ 页”
 
 https://helpx.adobe.com/cn/acrobat/kb/message-content-preparation-progress-opening.html
+
+### conda环境安装cvxopt
+
+```bash
+conda install -c conda-forge cvxopt
+```
+
