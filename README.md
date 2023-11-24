@@ -387,3 +387,18 @@ https://helpx.adobe.com/cn/acrobat/kb/message-content-preparation-progress-openi
 conda install -c conda-forge cvxopt
 ```
 
+### vscode使用mysql
+
+安装相关扩展。
+
+![mysql_extension](pic/mysql_extension.png)
+
+至此可以连接数据库
+
+**format sql文件**
+
+安装sql formatter。
+
+`alt + shift + f`配置mysql默认format为sql formatter。
+
+保存时可自动格式化。
