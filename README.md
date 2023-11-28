@@ -402,3 +402,14 @@ conda install -c conda-forge cvxopt
 `alt + shift + f`配置mysql默认format为sql formatter。
 
 保存时可自动格式化。
+
+### Ubuntu配置环境时老是出现依赖的套娃问题
+
+听我的，用aptitude。
+
+```bash
+sudo apt-get update
+sudo apt-get install aptitude
+```
+
+然后用aptitude替换apt-get。
