@@ -413,3 +413,15 @@ sudo apt-get install aptitude
 ```
 
 然后用aptitude替换apt-get。
+
+## 随手记
+
+农的接口文档
+
+没什么用
+
+https://blog.csdn.net/qq_39046854/article/details/118499126
+
+获取最低的英雄战力 接口文档
+
+https://zhuanlan.zhihu.com/p/520449999
