@@ -414,6 +414,16 @@ sudo apt-get install aptitude
 
 然后用aptitude替换apt-get。
 
+### conda安装各种库时报错Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+
+更新conda（我用这个方法解决了）
+
+```bash
+conda update --all --yes
+```
+
+如果还没解决的话，尝试创建一个新的、比较纯净的虚拟环境，再安装。
+
 ## Remember
 
 ### 农的各种api
