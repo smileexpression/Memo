@@ -414,14 +414,14 @@ sudo apt-get install aptitude
 
 然后用aptitude替换apt-get。
 
-## 随手记
+## Remember
 
-农的接口文档
+### 农的各种api
 
-没什么用
+英雄信息、原画等。
 
 https://blog.csdn.net/qq_39046854/article/details/118499126
 
-获取最低的英雄战力 接口文档
+英雄最低战力
 
 https://zhuanlan.zhihu.com/p/520449999
