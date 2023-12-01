@@ -7,9 +7,9 @@
 
 **下载clash-linux-amd64-v1.2.0**
 
-[clash下载地址 github](https://github.com/Dreamacro/clash/releases)（已跑路）
+~~[clash下载地址 github](https://github.com/Dreamacro/clash/releases)~~（已跑路）
 
-[别人下载好的](https://disk.pku.edu.cn/#/link/60D2F38BE69B49D11C6B32FEB32F31A3)（已失效）
+~~[别人下载好的](https://disk.pku.edu.cn/#/link/60D2F38BE69B49D11C6B32FEB32F31A3)~~（已失效）
 
 ```bash
 cd ~
