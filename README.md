@@ -500,6 +500,14 @@ conda update --all --yes
    这将在系统中将Python 3.9.0设置为默认版本。
    ```
 
+### windows系统powershell/terminal无法使用conda虚拟环境
+
+```bash
+conda init powershell
+```
+
+重启终端即可
+
 ## Remember
 
 ### 农的各种api
