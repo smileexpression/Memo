@@ -216,7 +216,9 @@ default=${NEW_USER}
 _EOF
 ```
 
-#### 问题
+#### 配置代理
+
+**问题**
 
 ```bash
 wsl: A localhost proxy configuration was detected but not mirrored into WSL. WSL in NAT mode does not support localhost proxies.
