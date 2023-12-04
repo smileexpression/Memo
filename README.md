@@ -426,6 +426,80 @@ conda update --all --yes
 
 如果还没解决的话，尝试创建一个新的、比较纯净的虚拟环境，再安装。
 
+### ubuntu使用pyenv管理python版本
+
+要在Ubuntu上安装pyenv，可以按照以下步骤进行操作：
+
+1. 更新系统软件包列表。打开终端并运行以下命令：
+
+   ```bash
+   sudo apt update
+   ```
+
+2. 安装pyenv的依赖项。运行以下命令：
+
+   ```bash
+   sudo apt install curl git
+   ```
+
+3. 使用curl命令安装pyenv。运行以下命令：
+
+   ```bash
+   curl https://pyenv.run | bash
+   这将下载并运行pyenv的安装脚本。
+   ```
+
+4. 添加pyenv到你的bash配置文件。打开你的bash配置文件（例如：
+
+   ```bash
+   .bashrc
+   ```
+
+   ```bash
+   .bash_profile
+   ```
+
+   或
+
+   ```bash
+   .zshrc
+   ```
+
+   ）并在末尾添加以下行：
+
+   ```bash
+   export PATH="$HOME/.pyenv/bin:$PATH"
+   eval "$(pyenv init -)"
+   eval "$(pyenv virtualenv-init -)"
+   
+   保存并关闭文件后，运行以下命令使配置文件生效：
+   source ~/.bashrc
+   ```
+
+5. 验证pyenv是否成功安装。运行以下命令：
+
+   ```bash
+   pyenv --version
+   
+   如果显示pyenv的版本信息，则表示安装成功。
+   ```
+
+6. 安装Python版本。现在你可以使用pyenv来安装不同的Python版本。例如，要安装Python 3.9.0，运行以下命令：
+
+   ```bash
+   pyenv install 3.9.0
+   
+   等待安装完成。
+   ```
+
+7. 设置全局Python版本。如果你想将Python 3.9.0设置为全局Python版本，运行以下命令：
+
+   ```bash
+   pyenv global 3.9.0
+   
+   这将在系统中将Python 3.9.0设置为默认版本。
+   ```
+
 ## Remember
 
 ### 农的各种api
