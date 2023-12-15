@@ -1,6 +1,8 @@
 # Memo
  A repo to store solutions to problems I've encountered on the way to learning.
 
+New problems will be added to issues.
+
 ## Problems
 
 ### 在ubuntu 18.04/22.04使用clash-linux-amd64-v1.2.0（弃用，不方便）
@@ -507,6 +509,8 @@ conda init powershell
 ```
 
 重启终端即可
+
+### [Git merge & rebase 区别和用法](https://www.bilibili.com/video/BV1Vc411S7gv/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=212ff176b778171e26249f81cfb5bdbc)
 
 ## Remember
 
