@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage[UTF8]{ctex}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfigure}
+% \usepackage{amsmath}
+\usepackage{amsmath,amsfonts}
+\usepackage{hyperref}
+
+\begin{document}
+\sloppy % 解决中英文混排的断行问题
+
+\title{title}
+\author{author}
+\date{\today}
+
+\maketitle
+
+\renewcommand{\abstractname}{摘要}  % 更改摘要名称
+
+\begin{abstract}
+    这里是摘要。
+\end{abstract}
+
+% 参考文献
+\begin{thebibliography}{99}
+    \bibitem{ref1} GUSLOVESMATH. \href{https://www.kaggle.com/code/guslovesmath/los-angeles-crime-data-quick-eda}{Los Angeles Crime Data Quick EDA}.
+    \bibitem{ref2} ANDREI SAFRONOV. \href{https://www.kaggle.com/code/safronov00/crimesolver-predictor#2.-Clean-Data}{CrimeSolver Predictor}.
+\end{thebibliography}
+
+
+\end{document}
