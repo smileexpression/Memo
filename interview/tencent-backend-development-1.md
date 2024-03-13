@@ -1,6 +1,6 @@
 实现即时通信用的什么协议？http吗？
 
-WebSocket（[深入理解WebSocket协议](#WebSocket)）为每一个客户端长连接开启两个协程，一个接收一个发送。
+WebSocket（[深入理解WebSocket协议](#深入理解WebSocket协议)）为每一个客户端长连接开启两个协程，一个接收一个发送。
 
 粘包现象是什么？怎么处理？
 
