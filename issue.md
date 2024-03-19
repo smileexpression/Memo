@@ -1,72 +1,43 @@
-注意，这个代码假设你有 `checkHashExists` 和 `saveHashMapping` 这两个函数来处理哈希值到文件路径的映射。这需要你有一个数据库或者内存中的数据结构来存储这个映射。具体的实现方式取决于你的应用的需求和环境。
+服务器配置公钥认证
 
-```go
-import (
-	"crypto/sha256"
-	"encoding/hex"
-	"image"
-	"image/png"
-	"io"
-	"net/http"
-	"os"
-	"strings"
+**本地windows生成SSH密钥对**
 
-	"github.com/nfnt/resize"
-)
-
-func UploadLocal(writer http.ResponseWriter, request *http.Request) {
-	//获得上传源文件
-	srcFile, head, err := request.FormFile("file")
-	if err != nil {
-		util.RespFail(writer, err.Error())
-		return
-	}
-	defer srcFile.Close()
-
-	//计算文件的哈希值
-	hash := sha256.New()
-	if _, err := io.Copy(hash, srcFile); err != nil {
-		util.RespFail(writer, err.Error())
-		return
-	}
-	hashValue := hex.EncodeToString(hash.Sum(nil))
-
-	//检查哈希值是否已存在，如果存在则不再进行后续的保存和压缩操作
-	//这需要你有一个哈希值到文件路径的映射，可以使用数据库或者内存中的数据结构来存储这个映射
-	if existingFile, exists := checkHashExists(hashValue); exists {
-		util.RespOk(writer, existingFile, "")
-		return
-	}
-
-	// Reset the file read pointer to the beginning after the hash calculation
-	srcFile.Seek(0, 0)
-
-	//读取图片并压缩
-	srcImage, _, err := image.Decode(srcFile)
-	if err != nil {
-		util.RespFail(writer, err.Error())
-		return
-	}
-	resizedImage := resize.Resize(1000, 0, srcImage, resize.Lanczos3)
-
-	//创建一个新的文件
-	filename := fmt.Sprintf("%d%s%s", time.Now().Unix(), util.GenRandomStr(32), ".png")
-	filepath := "./resource/" + filename
-	dstfile, err := os.Create(filepath)
-	if err != nil {
-		util.RespFail(writer, err.Error())
-		return
-	}
-	defer dstfile.Close()
-
-	//将压缩后的图片保存到新文件
-	png.Encode(dstfile, resizedImage)
-
-	//保存哈希值到文件路径的映射
-	saveHashMapping(hashValue, filepath)
-
-	util.RespOk(writer, filepath, "")
-}
-
+```powershell
+ssh-keygen
 ```
 
+**获取公钥**
+
+这个文件的名字是 `id_rsa.pub` 或者 `id_ed25519.pub`
+
+```powershell
+Get-Content ~/.ssh/id_rsa.pub
+```
+
+将公钥复制下来，打开远程服务器的 `~/.ssh/authorized_keys` 文件，将公钥粘贴进去
+
+```powershell
+nano ~/.ssh/authorized_keys
+```
+
+**服务器配置允许公钥认证**
+
+在某些情况下，服务器可能被配置为不允许使用公钥认证。查看服务器的 `/etc/ssh/sshd_config` 文件，确保 `PubkeyAuthentication` 选项被设置为 `yes`。
+
+如果你在 `/etc/ssh/sshd_config` 文件中看到 `#PubkeyAuthentication yes` 这一行，那么 `PubkeyAuthentication` 实际上被注释掉了，因为它前面有一个 `#` 符号。这意味着服务器并未启用公钥认证。
+
+你需要去掉这一行前面的 `#` 符号，以启用公钥认证。你可以使用文本编辑器（如 `nano` 或 `vi`）打开 `/etc/ssh/sshd_config` 文件，找到 `#PubkeyAuthentication yes` 这一行，删除前面的 `#` 符号，然后保存并关闭文件。
+
+完成这一步之后，你需要重启 SSH 服务以使更改生效。在大多数 Linux 系统中，你可以使用以下命令重启 SSH 服务：
+
+```bash
+sudo service ssh restart
+```
+
+或
+
+```bash
+sudo systemctl restart sshd
+```
+
+这样，你的服务器就启用了公钥认证，你应该可以使用 SSH 公钥进行身份验证了。
