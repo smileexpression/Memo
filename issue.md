@@ -1,6 +1,6 @@
 服务器配置公钥认证
 
-**本地windows生成SSH密钥对**
+**本地 windows 生成 SSH 密钥对**
 
 ```powershell
 ssh-keygen
